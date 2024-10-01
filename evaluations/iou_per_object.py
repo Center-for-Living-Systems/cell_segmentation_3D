@@ -1,28 +1,29 @@
 import numpy as np
 
-def iou_per_object(pred_labels, GT_labels):
-    # a function to evaluate segmentation using IOU per object   
-    # plot_flag: 0 no plotting
-    #            1: plot each cell in segmentation to make sure calculation is correct 
+def iou_per_object(seg_labels, GT_labels):
+    # a function to evaluate segmentation using IOU per object 
+    # seg_labels: cell segmentation labels
+    # GT_labels: ground truth labels
+    # note: these labels could be and usually are in different orders and might also have different number of objects
 
     # change the label since some times cell count start at 0 and background as nan
-    pred_labels = (pred_labels+1)*(pred_labels>0)
+    seg_labels = (seg_labels+1)*(seg_labels>0)
     GT_labels = (GT_labels+1)*(GT_labels>0)
 
     # get the unique label IDs
-    pred_label_list = np.unique(pred_labels)
+    seg_label_list = np.unique(seg_labels)
 
     # initialize metrics, all object iou as -1
-    iou_array = np.zeros([max(pred_label_list)+1,])  - 1
+    iou_array = np.zeros([max(seg_label_list)+1,])  - 1
     
     # for each lable ID == each segmented cell in prediction:   
-    for label_i in pred_label_list:
+    for label_i in seg_label_list:
         # ignore label ==0, which is the background        
         if(label_i==0):
             continue
 
         # get the segmented region of cell label_i
-        pred_mask = pred_labels == label_i
+        pred_mask = seg_labels == label_i
 
         # find the ground truth labels of these pixels
         map_list = GT_labels[pred_mask>0]
