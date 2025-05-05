@@ -22,3 +22,8 @@ These datasets are diverse in resolution, imaging modality (e.g., light-sheet, c
 - Provide a base for a future **3D Cell Segmentation Foundation Model**, which will use self-supervised pretraining (e.g., 3D MAE) to generalize across diverse imaging conditions and reduce reliance on manual annotation.
 
 By advancing 3D segmentation methods on real-world, challenging biological datasets, this project serves both immediate research needs and long-term infrastructure goals. Our final aim is to develop a generalizable, scalable segmentation framework that can support **adaptive experimentation and AI-driven biological discovery** across CLS projects.
+
+
+<img src="https://github.com/user-attachments/assets/41ea9174-a7ee-4e61-bc4f-5c8b28ecd4bf" style="width:50%;"/>
+
+
