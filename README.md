@@ -23,6 +23,15 @@ These datasets are diverse in resolution, imaging modality (e.g., light-sheet, c
 
 By advancing 3D segmentation methods on real-world, challenging biological datasets, this project serves both immediate research needs and long-term infrastructure goals. Our final aim is to develop a generalizable, scalable segmentation framework that can support **adaptive experimentation and AI-driven biological discovery** across CLS projects.
 
+### Requirements
+Python ≥ 3.9
+StarDist3D
+Cellpose with 3D support
+NumPy, SciPy, scikit-image, SimpleITK
+PyTorch ≥ 1.13 or TensorFlow ≥ 2.10 (depending on model implementation)
+Visualization tools: napari, matplotlib
+
+
 
 <img src="https://github.com/user-attachments/assets/41ea9174-a7ee-4e61-bc4f-5c8b28ecd4bf" style="width:50%;"/>
 
